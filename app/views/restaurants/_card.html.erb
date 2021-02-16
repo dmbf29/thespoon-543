@@ -1,0 +1,14 @@
+<div class="card-product">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+  <div class="card-product-infos">
+    <h2><%= link_to restaurant.name, restaurant_path(restaurant) %></h2>
+    <div class='d-flex'>
+      <p><%= restaurant.address %></p>
+      <div class="stars d-flex">
+        <% restaurant.rating.times do %>
+          <i class="fas fa-star"></i>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

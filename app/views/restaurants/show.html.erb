@@ -1,0 +1,13 @@
+<div class="container">
+  <h1><%= @restaurant.name %></h1>
+  <h4><%= @restaurant.address %></h4>
+  <div class="stars d-flex">
+    <% @restaurant.rating.times do %>
+      <i class="fas fa-star"></i>
+    <% end %>
+  </div>
+  <%= link_to 'Back', restaurants_path, class: 'btn btn-light' %>
+  <%= link_to restaurant_path(@restaurant), method: :delete, style: 'color:lightgray', data: { confirm: "Delete #{@restaurant.name}" } do %>
+    <i class="fas fa-times"></i>
+  <% end %>
+</div>

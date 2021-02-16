@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>Add a Restaurant</h1>
+  <%# <form action="/restaurants" method="post">
+    <input type="text" name="parmater_name">
+  </form> %>
+  <% if @restaurant.errors.any? %>
+    <% @restaurant.errors.full_messages.each do |msg| %>
+      <p><%= msg %></p>
+    <% end %>
+  <% end %>
+  <%= render 'restaurants/form' %>
+</div>
